@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <title>Ecommerce Store</title>
+  </head>
+  <body>
+    <button
+      data-drawer-target="sidebar-multi-level-sidebar"
+      data-drawer-toggle="sidebar-multi-level-sidebar"
+      aria-controls="sidebar-multi-level-sidebar"
+      type="button"
+      class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+    >
+      <span class="sr-only">Open sidebar</span>
+      <svg
+        class="w-6 h-6"
+        aria-hidden="true"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+        ></path>
+      </svg>
+    </button>
+    <aside
+      id="sidebar-multi-level-sidebar"
+      class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+      aria-label="Sidebar"
+    >
+      <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <h1 class="text-xl font-bold">Add To cart</h1>
+        <ul id="cart-list" class="space-y-2 font-medium">
+          <!-- <li class="py-3 sm:py-4">
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <img
+                  class="w-8 h-8 rounded-full"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+                  alt="Neil image"
+                />
+              </div>
+              <div class="flex-1 min-w-0 ms-4">
+                <p
+                  class="text-sm font-medium text-gray-900 truncate dark:text-white"
+                >
+                  Neil Sims
+                </p>
+              </div>
+              <a
+                class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
+              >
+                ❌
+              </a>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </aside>
+
+    <div class="p-4 sm:ml-64">
+      <div
+        id="category-filters"
+        class="flex items-center justify-center py-4 md:py-8 flex-wrap"
+      >
+        <button
+          type="button"
+          class="text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800"
+        >
+          All categories
+        </button>
+        <button
+          type="button"
+          class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
+        >
+          Shoes
+        </button>
+        <button
+          type="button"
+          class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
+        >
+          Bags
+        </button>
+        <button
+          type="button"
+          class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
+        >
+          Electronics
+        </button>
+        <button
+          type="button"
+          class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800"
+        >
+          Gaming
+        </button>
+      </div>
+
+      <div id="product-list" class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <!-- <div
+          class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <img
+            class="p-8 rounded-t-lg w-80 h-56"
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+            alt="product image"
+          />
+
+          <div class="px-5 pb-5">
+            <h5
+              class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+            >
+              Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+            </h5>
+            <div class="flex items-center mt-2.5 mb-5">
+              <b>Rating:</b>
+              <span
+                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3"
+                >5.0</span
+              >
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-3xl font-bold text-gray-900 dark:text-white"
+                >$599</span
+              >
+              <a
+                href="#"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >Add to cart</a
+              >
+            </div>
+          </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
